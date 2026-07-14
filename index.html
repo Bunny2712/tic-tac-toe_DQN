@@ -534,7 +534,7 @@
       <h2>How it sees the board</h2>
       <p>The network never learns "X strategy" and "O strategy" separately. Before every forward pass the board is made <strong>canonical</strong>: every cell is multiplied by the current player's number (X = 1, O = −1), so the net always sees <strong>"my pieces = 1, opponent = −1"</strong> — regardless of which symbol it's actually playing. One policy, two symbols.</p>
       <p>At inference the agent runs with <strong>ε = 0</strong>: no random exploration, just the argmax over its own Q-values with illegal cells masked to <strong>−∞</strong>. What you're playing against is the network at full strength.</p>
-      <p>Rewards during training were simple: <strong>+10</strong> for a win, <strong>0</strong> for a draw, and the opponent's best response was subtracted from the bootstrapped target — since tic-tac-toe is zero-sum, a great move for them is a bad outcome for the agent.</p>
+      <p>Rewards during training were simple: <strong>+10</strong> for a win, <strong>0</strong> for a draw, and the opponent's best response was subtracted from the target — since tic-tac-toe is zero-sum, a great move for them is a bad outcome for the agent.</p>
     </div>
     <div>
       <h2>Training configuration</h2>

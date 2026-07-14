@@ -92,6 +92,5 @@ tic-tac-toe_DQN/
 - Compare against a minimax baseline to formally verify optimal play
 - Add a difficulty slider by exposing ε at inference time
 - Train with prioritized experience replay
-## Author
+
  
-Built as part of a college internship project exploring reinforcement learning fundamentals through a small, fully self-contained example — training, evaluation, and deployment all included.
